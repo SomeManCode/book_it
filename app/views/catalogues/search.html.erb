@@ -1,0 +1,15 @@
+<h6><%=@book.length%> results found for <%=@title%> </h6>
+
+<% @book.each do |book| %>
+	<h4><%= book.title%></h4>
+	<h4><%=image_tag book.image_link%></h4>
+	<h4>Author: <%= book.authors%></h4>
+	<h4>Description: <%= book.description%></h4>
+	<%= link_to 'Book IT' %>
+	<%= link_to 'Read IT' %>
+	<%= link_to 'Own IT' %>
+
+	<br>
+	<br>
+	<br>
+<% end %>

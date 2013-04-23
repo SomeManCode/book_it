@@ -1,0 +1,21 @@
+<h1>Your Library</h1>
+
+
+
+<div class="library">
+	<% @catalogues.each do |catalogue| %>
+	  <tr>
+	    <td><%= catalogue.name %></td>
+	    <td><%= link_to 'Show', catalogue %></td>
+	  </tr>
+	  <br>
+	  <br>
+	<% end %>
+	</table>
+
+	<br />
+</div>
+
+<!-- 
+<%= link_to 'New Catalogue', new_catalogue_path %>
+ -->

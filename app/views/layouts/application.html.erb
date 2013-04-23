@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <title>BookIt</title>
+	  <%= stylesheet_link_tag    "application", :media => "all" %>
+	  <%= javascript_include_tag "application" %>
+	  <%= csrf_meta_tags %>
+	</head>
+	<body>
+		<h1>Welcome to The Book Project</h1>
+		<br>
+		<!-- :search is the paramater of the search action in users, but what is :name -->
+		<%= form_tag search_users_path, :method => 'post' do %>
+			<%= label_tag(:search) %>
+			<%= text_field_tag :search %>
+			<%= submit_tag "Search", :name => nil %>
+		<% end %>
+		<%= yield %>
+	</body>
+</html>
