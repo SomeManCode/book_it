@@ -3,7 +3,9 @@ class CataloguesController < ApplicationController
   # GET /catalogues.json
   def search
     @title = params[:search]
-    @book = Book.get_book(params[:search])
+    @books = Book.get_book(params[:search])
+
+    
   end
 
   def book_it
@@ -39,8 +41,6 @@ class CataloguesController < ApplicationController
 
 
 
-
-
   def index
     @catalogues = Catalogue.all
 
@@ -54,6 +54,8 @@ class CataloguesController < ApplicationController
   # GET /catalogues/1.json
   def show
     @catalogue = Catalogue.find(params[:id])
+
+    # @name = "NAME"
 
     respond_to do |format|
       format.html # show.html.erb

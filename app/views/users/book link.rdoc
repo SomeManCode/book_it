@@ -1,3 +1,9 @@
 -->
 <!--  --><!-- <!-- <!-- 
 	<%= link_to 'Book It', :controller => 'users', :action => 'book_it', :id => book.id %> --> --> -->
+
+<%= form_tag(save_users_path) do %>
+        <div class="actions">
+            <%= submit_tag %>
+        </div>
+<% end %>

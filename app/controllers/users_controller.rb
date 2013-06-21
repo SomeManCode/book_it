@@ -10,10 +10,15 @@ class UsersController < ApplicationController
   end
   
   def search
+    # binding.pry
     @title = params[:search]
     @book = Book.get_book(params[:search])
   end
 
+
+  def save
+  binding.pry
+  end
 
   def book_it
     # @book = Book.findby(params[:id])

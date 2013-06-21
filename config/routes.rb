@@ -5,6 +5,7 @@ BookIt::Application.routes.draw do
 resources :users do
   collection do
     post 'search'
+    post 'save'
   end
 end
 
