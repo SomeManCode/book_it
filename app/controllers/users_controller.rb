@@ -43,7 +43,6 @@ class UsersController < ApplicationController
     # @book = Book.find(params[:book])
   end
 
-  def show
-  end
+
 
 end

@@ -9,16 +9,9 @@ resources :users do
   end
 end
 
+root :to => 'users#index'
 
-
-  resources :catalogues do
-    collection do
-      post 'search'
-    end
-  end
-
-
-  resources :books
+resources :books
 
   # root :to => 'welcome#index'
   # match '/products => "controller#action'
